@@ -20,8 +20,7 @@ for itens in nomeAmigo:
         print(f'E um prazer te conhecer {itens}')
     elif itens == 'Thiagol':
         print(f'Obrigado pela ajuda {itens}')
-    elif itens == 'Robson':
-        print(f'Seja bem vindo {nomeAmigo[2]}')
+    elif itens == 'Robson':        print(f'Seja bem vindo {nomeAmigo[2]}')
     elif itens == 'Fillipe':
         print(f'So podia ser o nerd do {nomeAmigo[3]}')
     elif itens == 'Jhon presley':
