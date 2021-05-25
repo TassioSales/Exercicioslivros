@@ -22,12 +22,10 @@ while True:
     nomeDoAlbum = input('Digite o nome do album: ')
     faixas = input('Digite o numero de faixas do album: ')
     opt = input('Quer adicinar mais algum album ? [S/N]').split()[0].lower()
-    make_album(nome, nomeDoAlbum, faixas)
-    albuns = {'Nome Cantos': nome, 'Nome do album': nomeDoAlbum, "Faixas": faixas}
+    album = make_album(nome, nomeDoAlbum, faixas)
+    print(album)
     if opt == 's':
         continue
     else:
         print('Muito obrigado')
-        print('Aqui estão seus albuns')
         break
-print(albuns)
