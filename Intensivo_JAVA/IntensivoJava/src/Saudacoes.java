@@ -11,8 +11,8 @@ public class Saudacoes {
            add("Madalena");
           }
         };
-        for(int i = 0; i < list.size(); i++){
-            System.out.println("Ola, tudo bem " + list.get(i));
+        for (String s : list) {
+            System.out.println("Ola, tudo bem " + s);
         }
     } 
 }

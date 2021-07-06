@@ -18,8 +18,8 @@ public class Nomes {
            add("Madalena");
           }
         };
-        for(int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
+        for (String s : list) {
+            System.out.println(s);
         }
     } 
 }
