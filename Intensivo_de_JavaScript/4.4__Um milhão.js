@@ -10,14 +10,11 @@ capaz de somar um milhão de números.
 
 let listaNum = []
 
-
-for (let i = 1; i < 100001; i++) {
-    listaNum.push(i)
-    
-
+for (let i = 1; i < 1000001; i++) {
+    listaNum.push(i)   
 }
 
-console.log(Math.max(...listaNum))
-console.log(Math.min(...listaNum))
+console.log(listaNum.reduce((a,b)=>Math.max(a,b)))
+console.log(listaNum.reduce((a,b)=>Math.min(a,b)))
 const total = listaNum.reduce((total, currentElement) => total + currentElement)
 console.log(total)
