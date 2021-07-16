@@ -1,5 +1,6 @@
 """Crie uma lista de múltiplos de 3, de 3 a 30. Use um laço for para
 exibir os números de sua lista."""
 
-for c in range(3,33,3):
-    print(c, end=", ")
+listaMultiploDeTres = [x for x in range(3,30,3)]
+
+print(listaMultiploDeTres)
