@@ -17,15 +17,23 @@ class Carro():
         
     def update_odemeter(self, milage ):
         """Define o valor de leitura do hodometro com valor especificado"""
-        self.odemeter_reading = milage
-    
+        if milage >= self.odemeter_reading:
+            self.odemeter_reading = milage
+        else:
+            print('Você não pode reverter um hodômetro!')
+            
+    def increment_odometer(self, miles):
+        """Soma a quantidade especificada ao valor de leitura do hodômetro."""
+        self.odemeter_reading += miles
+        
 if __name__ == "__main__":
     
     carro1 = Carro('audi', 'a4', 2016)
     carro2 = Carro("Ford", "Palio", 2020)
     
     print(Carro.get_descriptive_name(carro1))
-    carro1.update_odemeter(24)
+    carro1.update_odemeter(23500)
+    carro1.increment_odometer(100)
     print(Carro.read_odometer(carro1))
     print(Carro.get_descriptive_name(carro2))
     carro2.update_odemeter(31)
