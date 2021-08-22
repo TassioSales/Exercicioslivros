@@ -27,27 +27,26 @@ class User(object):
 class Admin(User):
     def __init__(self, nome,sobrenome, cpf, raca, idade):
         super().__init__(nome, sobrenome, cpf, raca, idade)
-        self.privilegios = ["can add post", "candelete post", "can ban user"]
+        self.privilages = Privileges()
     
-    def show_privileges(self):
-        print(f"O usuario {self.nome} tem")
-        for item in self.privilegios:
-            print(f"Privilegio de adm {item}")
+class Privileges():
+    def __init__(self, privilages=[]):
+        self.privilages = privilages
+        
+    def show_privilages(self):
+        print(f'\n privilegios:')
+        if self.privilages:
+            for privilage in self.privilages:
+                print(f'    -> {privilage}')
+        else:
+            print(f'o usuario nao tem')
 
+    
 if __name__ == "__main__":
-    user1 = User("Tassio", "Sales", "11122233345", "Pardo", 31)
-    user1.greet_user()
-    user1.describe_user()
-    
-    user2 = User("Cassio", "Sales", "000000000", "Pardo", 28)
-    user2.greet_user()
-    user2.describe_user()
-    
-    user3 = User("Jhon", "Presley", "22233344456", "Amarelo", 27)
-    user3.greet_user()
-    user3.describe_user()
-    
+
     user4 = Admin('Cassia', "Luciana", "111122225", "Branca", 18)
     user4.greet_user()
     user4.describe_user()
-    user4.show_privileges()
+    user4.privilages.privilages  = ["can add post", "candelete post", "can ban user"]
+    user4.privilages.show_privilages()
+  
